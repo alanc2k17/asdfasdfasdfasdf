@@ -1,0 +1,15 @@
+var pic = document.getElementById("vimage");
+
+var drawCircle = function(e) {
+    var c = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    
+    c.setAttribute("cx", e.offsetX);
+    c.setAttribute("cy", e.offsetY);
+    c.setAttribute("r", 10);
+    c.setAttribute("fill", "red");
+    c.setAttribute("stroke", "black");
+
+    pic.appendChild(c);
+}
+
+pic.addEventListener("click", drawCircle);
